@@ -110,6 +110,7 @@ body {
   right: 0;
   width: 500px;
   height: 400px;
+  padding-bottom: 50px;
 }
 
 .swiper-slide img {
@@ -121,9 +122,31 @@ body {
 }
 
 .swiper-button-next, .swiper-button-prev {
-  top: auto;
-  bottom: -20px;
+  position: relative;
+  top: 30px;
   z-index: 100;
+  width: auto;
+  height: auto;
+  outline: none;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  content: "";
+  width: 40px;
+  height: 12px;
+  display: block;
+}
+
+.swiper-button-prev:after {
+  background: url(../img/svg/left.svg);
+}
+
+.swiper-button-next:after {
+  background: url(../img/svg/right.svg);
+}
+
+.swiper-pagination-fraction {
+  bottom: 20px;
 }
 
 ._contacts {
@@ -147,6 +170,14 @@ body {
   font-size: 12px;
 }
 
+#testModal .modal-dialog .modal-header {
+  border-bottom: none;
+}
+
+#testModal .modal-dialog .modal-body {
+  padding: 0;
+}
+
 @media (min-width: 992px) {
   ._bg ._center ._title {
     max-width: 450px;
@@ -156,5 +187,8 @@ body {
   }
   ._bg ._center ._btn-text {
     max-width: 200px;
+  }
+  #testModal .modal-dialog {
+    max-width: 80%;
   }
 }

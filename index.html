@@ -13,6 +13,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="libs/blueimp-gallery/css/blueimp-gallery.min.css">
 	<link rel="stylesheet" type="text/css" href="css/project.min.css">
 	<link rel="stylesheet" type="text/css" href="css/video.min.css">
 </head>
@@ -54,7 +55,7 @@
 								</div>
 								<div class="d-flex align-items-center">
 									<div>
-										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal">
 											Узнать стоимость сейчас
 										</button>
 									</div>
@@ -80,45 +81,76 @@
 	</div>
 	<!-- Swiper -->
 	<div class="swiper mySwiper">
-		<div class="swiper-wrapper">
+		<div class="swiper-wrapper" id="links">
 			<div class="swiper-slide">
-				<img src="img/gallery/1.jpg" alt="">
+				<a href="img/gallery/1.jpg" title="">
+					<img src="img/gallery/1.jpg" alt="">
+				</a>
 			</div>
 			<div class="swiper-slide">
-				<img src="img/gallery/2.jpg" alt="">
+				<a href="img/gallery/2.jpg">
+					<img src="img/gallery/2.jpg" alt="">
+				</a>
 			</div>
 			<div class="swiper-slide">
-				<img src="img/gallery/3.jpg" alt="">
+				<a href="img/gallery/3.jpg">
+					<img src="img/gallery/3.jpg" alt="">
+				</a>
 			</div>
 			<div class="swiper-slide">
-				<img src="img/gallery/4.jpg" alt="">
+				<a href="img/gallery/4.jpg">
+					<img src="img/gallery/4.jpg" alt="">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="img/gallery/5.jpg">
+					<img src="img/gallery/5.jpg" alt="">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="img/gallery/6.jpg">
+					<img src="img/gallery/6.jpg" alt="">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="img/gallery/7.jpg">
+					<img src="img/gallery/7.jpg" alt="">
+				</a>
 			</div>
 		</div>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
+		<div class="d-flex justify-content-between">
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
 		<div class="swiper-pagination"></div>
 	</div>
 	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<iframe src="test/index.html" width="100%" height="600"></iframe>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
 			</div>
 		</div>
+	</div>
+	<!-- Blueimp gallery -->
+	<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls text-white">
+		<div class="slides"></div>
+		<h3 class="title"></h3>
+		<a class="prev">‹</a>
+		<a class="next">›</a>
+		<a class="close">×</a>
+		<a class="play-pause"></a>
+		<ol class="indicator"></ol>
 	</div>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="libs/blueimp-gallery/js/blueimp-gallery.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/video.min.js"></script>
 	<script>
@@ -136,6 +168,16 @@
 				prevEl: ".swiper-button-prev",
 			},
 		});
+	</script>
+	<script>
+		document.getElementById('links').onclick = function (event) {
+			event = event || window.event;
+			var target = event.target || event.srcElement,
+					link = target.src ? target.parentNode : target,
+					options = {index: link, event: event},
+					links = this.getElementsByTagName('a');
+			blueimp.Gallery(links, options);
+		};
 	</script>
 </body>
 </html>

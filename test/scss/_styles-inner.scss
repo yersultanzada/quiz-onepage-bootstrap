@@ -1,10 +1,7 @@
-@font-face {
-  font-family: 'Oswald';
-  src: url('../fonts/Oswald-DemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
-
 html, body, h1, h2, h3, h4, h5, h6, div, ul, ul li, ol, ol li, input, label, textarea, select, option, button, span, p, select, header, footer, nav, i, b, br, hr, article {
   margin: 0;
   padding: 0;
@@ -29,19 +26,6 @@ input:focus, label:focus, textarea:focus, select:focus, option:focus, button:foc
 *, *:before, *:after, input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/PTSans-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/PTSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
 }
 .arcticmodal-overlay, .arcticmodal-container {
   position: fixed;
@@ -257,11 +241,6 @@ ul.bxslider {
   padding: 10px;
 }
 
-html, body {
-  font-family: "PT Sans", sans-serif;
-  max-width: 1170px; margin: auto;
-}
-
 .container {
   width: 100%;
   padding: 0 30px;
@@ -384,7 +363,7 @@ label.error {
 }
 
 .header-line {
-  padding: 30px 0;
+  padding-bottom: 30px;
 }
 .header-line .container {
   display: -webkit-box;
@@ -412,12 +391,18 @@ label.error {
 }
 .header-line__title {
   font-size: 18px;
+  text-transform: uppercase;
   line-height: 1.33;
+  font-weight: bold;
+  span {
+    color: $main-color-quiz;
+  }
 }
 
 .main-progress {
   background: #F2F2F2;
   position: relative;
+  padding: 3px;
 }
 .main-progress__extender {
   position: absolute;
@@ -434,8 +419,6 @@ label.error {
   position: relative;
   width: 100%;
   padding: 15px 10px;
-  font-size: 17px;
-  text-align: center;
   display: none;
 }
 .main-progress__text_active {

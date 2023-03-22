@@ -4,11 +4,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
-@font-face {
-  font-family: 'Oswald';
-  src: url("../fonts/Oswald-DemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
 
 html, body, h1, h2, h3, h4, h5, h6, div, ul, ul li, ol, ol li, input, label, textarea, select, option, button, span, p, select, header, footer, nav, i, b, br, hr, article {
@@ -37,20 +35,6 @@ input:focus, label:focus, textarea:focus, select:focus, option:focus, button:foc
 *, *:before, *:after, input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/PTSans-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/PTSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
 }
 
 .arcticmodal-overlay, .arcticmodal-container {
@@ -276,12 +260,6 @@ ul.bxslider {
   padding: 10px;
 }
 
-html, body {
-  font-family: "PT Sans", sans-serif;
-  max-width: 1170px;
-  margin: auto;
-}
-
 .container {
   width: 100%;
   padding: 0 30px;
@@ -316,7 +294,7 @@ label.error {
 }
 
 .btn-next:hover {
-  background: #0b79f5;
+  background: #f5d77c;
 }
 
 .btn-next span {
@@ -335,8 +313,8 @@ label.error {
 }
 
 .btn-next_active {
-  border-bottom: 3px solid #0861C5;
-  background: #0861C5;
+  border-bottom: 3px solid #F2C94C;
+  background: #F2C94C;
   color: #fff;
 }
 
@@ -437,7 +415,7 @@ label.error {
 }
 
 .header-line {
-  padding: 30px 0;
+  padding-bottom: 30px;
 }
 
 .header-line .container {
@@ -463,17 +441,24 @@ label.error {
   margin-right: 35px;
   font-size: 35px;
   font-weight: 600;
-  color: #0861C5;
+  color: #F2C94C;
 }
 
 .header-line__title {
   font-size: 18px;
+  text-transform: uppercase;
   line-height: 1.33;
+  font-weight: bold;
+}
+
+.header-line__title span {
+  color: #F2C94C;
 }
 
 .main-progress {
   background: #F2F2F2;
   position: relative;
+  padding: 3px;
 }
 
 .main-progress__extender {
@@ -483,7 +468,7 @@ label.error {
   bottom: 0;
   max-width: 100%;
   height: 100%;
-  background: #0861C5;
+  background: #F2C94C;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -492,8 +477,6 @@ label.error {
   position: relative;
   width: 100%;
   padding: 15px 10px;
-  font-size: 17px;
-  text-align: center;
   display: none;
 }
 
@@ -549,7 +532,7 @@ label.error {
   display: block;
   width: 100%;
   height: 1px;
-  background: #0861C5;
+  background: #F2C94C;
   position: absolute;
   top: 50%;
   left: 0;
@@ -559,7 +542,7 @@ label.error {
 .step__extender-item {
   width: 9px;
   height: 9px;
-  border: 1px solid #0861C5;
+  border: 1px solid #F2C94C;
   border-radius: 50%;
   background: #FFF;
   margin-right: 15px;
@@ -572,7 +555,7 @@ label.error {
 }
 
 .step__extender-item_active {
-  background: #0861C5;
+  background: #F2C94C;
 }
 
 .step-slide {
@@ -629,7 +612,7 @@ label.error {
   width: 35px;
   min-width: 35px;
   height: 35px;
-  border: 3px solid #0861C5;
+  border: 3px solid #F2C94C;
   border-radius: 50%;
   font-size: 17px;
   font-weight: bold;
@@ -695,7 +678,7 @@ label.error {
   display: block;
   width: 10px;
   height: 10px;
-  background: #0861C5;
+  background: #F2C94C;
   border-radius: 50%;
   position: absolute;
   top: 5px;
@@ -714,7 +697,7 @@ label.error {
   display: block;
   width: 20px;
   height: 20px;
-  border: 1px solid #0861C5;
+  border: 1px solid #F2C94C;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -756,8 +739,8 @@ label.error {
   padding: 25px 0;
   border-radius: 4px;
   border: 0;
-  border-bottom: 3px solid #0861C5;
-  background: #0861C5;
+  border-bottom: 3px solid #F2C94C;
+  background: #F2C94C;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
@@ -787,7 +770,7 @@ label.error {
 }
 
 .last-step-form__button:hover {
-  background: #0b79f5;
+  background: #f5d77c;
 }
 
 .last-step-form__accept {
@@ -848,7 +831,7 @@ label.error {
 }
 
 .after-submit__descr a {
-  color: #0861C5;
+  color: #F2C94C;
   text-decoration: underline;
 }
 

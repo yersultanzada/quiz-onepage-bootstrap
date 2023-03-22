@@ -26,7 +26,6 @@ $(document).ready(function() {
 		onSliderLoad: function (currentIndex) {
 			// первоначальные стили
 			$('.main-progress__text').eq(currentIndex).addClass('main-progress__text_active');
-			$('.step__extender-item').eq(currentIndex).addClass('step__extender-item_active');
 			$('.main-progress__extender').css('width', progress.width + '%');
 		},
 		onSlideAfter: function (slideElement, oldIndex, newIndex) {
@@ -37,10 +36,6 @@ $(document).ready(function() {
 			// изменение полосы загрузки
 			progress.current += progress.width;
 			$('.main-progress__extender').css('width', progress.current + '%');
-
-			// изменение шага
-			$('.step__extender-item').eq(newIndex).addClass('step__extender-item_active');
-			$('.step__text span').html(newIndex + 1);
 
 			// изменение заголовка в полосе загрузки
 			if ( $('.main-progress__text').eq(newIndex).length != 0 ) {
