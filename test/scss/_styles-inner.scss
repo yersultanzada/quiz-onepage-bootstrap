@@ -258,11 +258,9 @@ label.error {
   display: block;
   width: 100%;
   padding: 19px 0;
-  border-radius: 4px;
-  border-bottom: 3px solid #d0d0d0;
+  border-radius: 10px;
   background: #DADADA;
-  margin-left: 15px;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
   color: #A7A7A7;
   text-align: center;
@@ -284,13 +282,14 @@ label.error {
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url("img/next-row.svg") no-repeat center;
+  background: url("img/next-row-a.svg") no-repeat center;
   margin-left: 10px;
+  vertical-align: middle;
 }
 .btn-next_active {
-  border-bottom: 3px solid $main-color-quiz;
   background: $main-color-quiz;
-  color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+  color: #333;
 }
 .btn-next_active span:after {
   background: url("../img/next-row-a.svg") no-repeat center;
@@ -298,6 +297,7 @@ label.error {
 .btn-next-container {
   width: 100%;
   position: relative;
+  text-align: right;
 }
 .btn-next-container:before { content: "";
   display: block;
@@ -354,7 +354,7 @@ label.error {
 .bx-next {
   display: inline-block;
   width: 100%;
-  max-width: 285px;
+  max-width: 220px;
 }
 
 .portable-test-wrapper {
@@ -390,12 +390,12 @@ label.error {
   color: $main-color-quiz;
 }
 .header-line__title {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   line-height: 1.33;
-  font-weight: bold;
   span {
     color: $main-color-quiz;
+    font-weight: bold;
   }
 }
 
@@ -418,7 +418,7 @@ label.error {
 .main-progress__text {
   position: relative;
   width: 100%;
-  padding: 15px 10px;
+  padding: 15px 30px;
   display: none;
 }
 .main-progress__text_active {
@@ -522,7 +522,7 @@ label.error {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -567,7 +567,6 @@ label.error {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-left: 35px;
 }
 .step-slide__grid input.pick-item__digit {
   width: 170px;
@@ -578,8 +577,8 @@ label.error {
 }
 .pick-item {
   display: block;
-  width: 238px;
-  margin: 0 15px 30px;
+  width: 150px;
+  margin: 0 30px 30px 0;
   cursor: pointer;
 }
 .pick-item__img {
@@ -611,7 +610,6 @@ label.error {
   left: 5px;
 }
 .pick-item__label {
-  font-size: 17px;
   line-height: 1.4;
   position: relative;
   padding-left: 30px;
