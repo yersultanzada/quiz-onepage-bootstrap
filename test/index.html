@@ -2,7 +2,7 @@
 <html lang="ru"><head>
 	<title>Узнайте стоимость курса + получите гарантированный подарок</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -106,33 +106,7 @@
 					</label>
 					<!-- ONE-ITEM END -->
 
-					<!-- ONE-ITEM START -->
-					<label for="step1-5" class="pick-item">
-						<div class="pick-item__img">
-							<img src="img/s1-5.jpg" alt="item">
-						</div>
-						<input class="pick-item__input" type="radio" name="Продукция" id="step1-5" value="Набор кастрюлей">
-						<div class="pick-item__label">Набор кастрюлей/сковородок</div>
-					</label>
-					<!-- ONE-ITEM END -->
-
-					<!-- ONE-ITEM START -->
-					<label for="step1-6" class="pick-item">
-						<div class="pick-item__img">
-							<img src="img/s1-6.jpg" alt="item">
-						</div>
-						<input class="pick-item__input" type="radio" name="Продукция" id="step1-6" value="Другое">
-						<div class="pick-item__label">Другое</div>
-					</label>
-					<!-- ONE-ITEM END -->
-
-					<div id="next1" class="btn-next-container">
-						<a class="bx-next" href="">
-							<div class="btn-next">
-								<span>на следующий шаг</span>
-							</div>
-						</a>
-					</div>
+					<div id="next1" class="btn-next-container"></div>
 				</div>
 			</div>
 			<!-- ONE-STEP END -->
@@ -147,7 +121,7 @@
 					<input class="pick-item__digit" type="text" name="Город">
 					<!-- ONE-ITEM END -->
 
-					<div id="next2" class="btn-next-container"><a class="bx-next" href=""><div class="btn-next"><span>на следующий шаг</span></div></a></div>
+					<div id="next2" class="btn-next-container"></div>
 				</div>
 			</div>
 			<!-- ONE-STEP END -->
@@ -173,7 +147,7 @@
 					</label>
 					<!-- ONE-ITEM END -->
 
-					<div id="next3" class="btn-next-container"><a class="bx-next" href=""><div class="btn-next"><span>на следующий шаг</span></div></a></div>
+					<div id="next3" class="btn-next-container"></div>
 				</div>
 			</div>
 			<!-- ONE-STEP END -->
@@ -205,12 +179,10 @@
 					</label>
 					<!-- ONE-ITEM END -->
 
-					<div id="next4" class="btn-next-container"><a class="bx-next" href=""><div class="btn-next"><span>на следующий шаг</span></div></a></div>
+					<div id="next4" class="btn-next-container"></div>
 				</div>
 			</div>
 			<!-- ONE-STEP END -->
-
-
 
 			<!-- ONE-STEP START -->
 			<div class="step-slide prev_slide">
@@ -221,8 +193,8 @@
 					<h4 class="step-slide__discount">+ гарантированный подарок или скидка</h4>
 					<div class="last-step-form">
 						<label class="last-step-form__label">Введите имя и номер телефона, наш менеджер перезвонит и отправит варианты на Ватсап.</label>
-						<input class="last-step-form__input contact-form__input_name" type="text" name="Имя" placeholder="Введите Ваше имя" required="required">
-						<input class="last-step-form__input contact-form__input_tel" type="tel" name="Телефон" placeholder="Введите Ваш номер" required="required">
+						<input class="last-step-form__input contact-form__input_name" type="text" name="Имя" placeholder="Введите имя *" required="required">
+						<input class="last-step-form__input contact-form__input_tel" type="tel" name="Телефон" placeholder="Введите телефон *" required="required">
 						<div class="contact-form__preloader"></div>
 						<fieldset class="contact-form__input-wrapper contact-form__input-wrapper_hidden">
 							<label for="honeypot">Помогает бороться со спамом. Должно быть пустым!</label>
@@ -241,7 +213,7 @@
 			<!-- ONE-STEP END -->
 
 			<!-- ONE-STEP START -->
-			<div class="step-slide last_slide">
+			<div class="step-slide last_slide" id="thanks">
 				<!-- AFTER SUBMIT START -->
 				<div class="after-submit">
 					<div class="container">

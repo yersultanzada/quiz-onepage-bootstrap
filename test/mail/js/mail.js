@@ -3,7 +3,7 @@ $(function() {
 		event.preventDefault();
 
 		// Ссылка, которую получили на этапе публикации приложения
-		let appLink = "https://script.google.com/macros/s/AKfycbzS6NiNaugjkCNIPdZL0xzkYtLRZFxkNzYrSmWu/exec";
+		let appLink = "https://script.google.com/macros/s/AKfycbwuFPw9WoLy7elwOGDbs7yd9G4Dlmzy-dlyCkbfP86ElTlQAb3QaOtwpOYkEX8apmE6Qw/exec";
 
 		// Сообщение при успешной отправке данных
 		let successRespond = 'Сообщение успешно отправлено.';
@@ -23,10 +23,8 @@ $(function() {
 		// Кнопка отправки формы
 		let submitButton = $(this).find('.contact-form__button');
 
-
 		// FormData
 		let fd = new FormData(form);
-
 
 		$.ajax({
 
@@ -67,14 +65,15 @@ $(function() {
 				$('.last_slide').css({
 					'display': 'block'
 				});
+
 				$('.header-line').slideUp(300);
 				$('.progress-line').slideUp(300);
 
 				// Возвращаем активность кнопке отправки
 				submitButton.prop('disabled', false);
-
 				// Очищаем поля формы
 				form.reset();
+
 
 			} else {
 				formRespond.html(errorRespond).css('color', '#c64b4b');

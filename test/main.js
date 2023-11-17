@@ -9,8 +9,6 @@ $(document).ready(function() {
 		process: doProgress
 	};
 
-	// console.log(progress);
-
 	function doProgress () {}
 
 	var testSlider = $('.test-slider').bxSlider({
@@ -23,6 +21,8 @@ $(document).ready(function() {
 		pager: false,
 		nextSelector: '.btn-next-container',
 		nextText: '<div class="btn-next"><span>на следующий шаг</span></div>',
+		prevSelector: '.btn-prev-container',
+		prevText: '<div class="btn-prev"><span>назад</span></div>',
 		onSliderLoad: function (currentIndex) {
 			// первоначальные стили
 			$('.main-progress__text').eq(currentIndex).addClass('main-progress__text_active');
@@ -45,14 +45,10 @@ $(document).ready(function() {
 
 			var toTopDoc = window.parent.document.querySelector('.fancybox-slide--iframe');
 
-			// console.log(toTopDoc);
-
 			$(toTopDoc).animate({scrollTop: 0}, 0);
 
 		}
 	});
-
-	// testSlider.goToSlide(4);
 
 	$('.pick-item__input').on('change', function(event) {
 		event.preventDefault();
