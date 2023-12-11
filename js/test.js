@@ -21,8 +21,6 @@ $(document).ready(function() {
 		pager: false,
 		nextSelector: '.btn-next-container',
 		nextText: '<div class="btn-next"><span>на следующий шаг</span></div>',
-		prevSelector: '.btn-prev-container',
-		prevText: '<div class="btn-prev"><span>назад</span></div>',
 		onSliderLoad: function (currentIndex) {
 			// первоначальные стили
 			$('.main-progress__text').eq(currentIndex).addClass('main-progress__text_active');

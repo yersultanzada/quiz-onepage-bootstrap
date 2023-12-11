@@ -57,20 +57,7 @@ $(function() {
 
 				// Прячем прелоадер
 				preloader.css('opacity', '0');
-
-				// Выводим ответ формы.
-				$('.prev_slide').css({
-					'display': 'none'
-				});
-				$('.last_slide').css({
-					'display': 'block'
-				});
-
-				$('.header-line').slideUp(300);
-				$('.progress-line').slideUp(300);
-
-				// Возвращаем активность кнопке отправки
-				submitButton.prop('disabled', false);
+				window.location.replace("/thankyou.php?status=success");
 				// Очищаем поля формы
 				form.reset();
 
